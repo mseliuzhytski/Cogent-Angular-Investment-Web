@@ -1,4 +1,12 @@
-# MteInvestmentApp
+# My test example Investment App - MteInvestmentApp
+
+## Description 
+- This project was created as part of the training program with Ravi Mishra as instructor at Cogent. 
+- This is "Investtment Tracker" web service that provides:
+  - Lumsum Calculator
+  - SIP Calculator
+  - Calculator for IBM company investments on daily, monthly/yearly basis
+- Utilizes Boostrap and CanvasJS Angular modules
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
