@@ -1,0 +1,99 @@
+
+<!--<div class="top-msg">
+    <div class="top-msg-const" [ngClass]="topmsgset">Provide profile information</div>
+    <div class="top-msg-profile" [ngClass]="topmsgpolar">
+        <div>name: {{username}}</div>
+        <div>age: {{age}}</div>
+        <div>CTC - {{ctc}}Lac</div>
+    </div>
+</div>-->
+<div class="user-box">
+<div class="user-form" [ngClass]="topmsgpolar">
+    <form>
+        <div class="mb-3">
+          <label class="form-label">Name: {{username}} </label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Age: {{age}}</label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">CTC - {{ctc}}Lac</label>
+        </div>
+        <button class="btn btn-outline-primary" (click)="toggleTopMsg()">Edit</button>
+    </form>
+</div>
+<div class="user-form" [ngClass]="topmsgset">
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="mb-3">
+      <label class="form-label">Name (First/Last): </label>
+      <input type="text" class="form-control" name="username"
+      minlength="2"
+      ngModel
+      required>
+      <div class="form-text">Name needs to be at least 2 characters.</div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Age:</label>
+      <input type="number" class="form-control" name="age"
+      min="18"
+      ngModel
+      required>
+      <div class="form-text">Age restriction is 18 and older.</div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">CTC amount (Lac):</label>
+      <input type="number" class="form-control" name="ctc"
+      min="1"
+      ngModel
+      required>
+      <div class="form-text">Cannot be 0.</div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]=!f.valid>Submit</button>
+</form>
+</div>
+</div>
+<hr>
+
+
+
+
+
+
+
+
+
+<!--<h3>Welcome to Investment Calculator</h3>
+<div class="user-info-box">
+    <div class="user-info-box-bg">
+        <div class="user-info-input" [ngClass]="editableclass">
+            <label>User information</label>
+            <br>
+            <input type="text" [(ngModel)]="username" placeholder="Enter first and last name">
+            <br>
+            <input type="number" [(ngModel)]="yrold" placeholder="Enter age">
+            <br>
+            <input type="number" [(ngModul)]="ctc" value="Eneter CTC">
+            <br>
+            <button (click)="toggleEditableclass()">Enter</button>
+            <div *ngIf="userinfonotvalid">Enter user information</div>
+    </div>
+    <br>
+    <div class="user-info-display-bg">
+        <div class="user-info-display" [ngClass]="editablepolar">
+            Name: {{ username }}<br>
+            Age: {{ yrold }}<br>
+            <br>
+            <button (click)="toggleEditableclass()">Edit</button>
+        </div>
+    </div>
+</div>
+<br>
+<h3>Choose a method:</h3><div [ngClass]="editableclass">Provide user</div>
+<div class="two-option-menu" [ngClass]="editablepolar">
+    <a routerLink="/sip">SIP</a>
+    <a routerLink="/lumsum">LUMSUM</a>
+    <a routerLink="/">Reset</a>
+</div>
+<router-outlet></router-outlet>
+-->
+

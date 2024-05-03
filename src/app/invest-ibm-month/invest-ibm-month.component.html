@@ -1,0 +1,74 @@
+<div class="sip-title">
+    <h3>IBM Monthly Investment: </h3>
+</div>
+<div class="sip-init">
+<div>
+<!--<form (ngSubmit)="onApply()" #fi="ngForm">-->
+    <form>    
+    <h5>IBM records:</h5>
+    <div class="sip-init-box">
+        <a class="btn btn-outline-primary" routerLink="/ibm/monthlytable">Show table</a>
+    </div>
+    <!--<button type="submit" class="btn btn-primary" [disabled]=!fi.valid>Apply</button>-->
+    </form>
+</div>
+<hr>
+<div class="sip-init">
+    <div>
+    <!--<form (ngSubmit)="onApply()" #fi="ngForm">-->
+        <form>    
+        <h5>Stocks:</h5>
+        <div class="sip-init-box">
+            <div class="sip-init-field">
+                <label class="form-label">Balance $: {{totalbalstr}}</label><br>
+                <label class="form-label">Profit %: </label>
+                <label class="form-label" [ngClass]="totalcolorclass"><strong> {{totaldiffperstr}}</strong></label><br>
+                <label class="form-label">Latest (Units/$1): </label>
+                <label class="form-label">{{totalrate}}</label>
+            </div>
+        </div>
+        <hr>
+        <h5>Latest: {{ibmres["Meta Data"]["3. Last Refreshed"]}} </h5>
+        <div class="sip-init-box">
+            <div class="sip-init-field">
+                <label class="form-label">Amount:</label>
+                <input type="number" class="form-control" name="totalamountunits"
+                (change)="getAmount($event)">
+            </div>
+            <div class="sip-init-field">
+                <label class="form-label">Units:</label><br>
+                <label class="form-label">{{totalamountunitsstr || "-"}}</label><br> 
+                
+            </div>
+            <div class="sip-init-field">
+                <label class="form-label">Rate (Units/$1):</label><br>
+                <label class="form-label">{{totalratefirst}}</label><br> 
+            </div>
+        </div>
+        <h5>Throughout:</h5>
+        <div class="sip-init-box">
+            <div class="sip-init-field">
+                <label class="form-label">At (time): </label>
+                <select class="form-select"
+                (change)="setTimeStart($event)">
+                    <option selected></option>
+                    <option [value]="row" *ngFor="let row of getKeysStart()">{{getDateTime(row)}}</option>
+                </select>
+            </div>
+            <div class="sip-init-field">
+                <label class="form-label">Withdraw at (time): </label>
+                <select class="form-select"
+                (change)="setTimeLast($event)">
+                    <option selected></option>
+                    <option [value]="row" *ngFor="let row of getKeys()">{{getDateTime(row)}}</option>
+                </select>
+            </div>
+        </div>
+        <!--<button type="submit" class="btn btn-primary" [disabled]=!fi.valid>Apply</button>-->
+        </form>
+    </div>
+</div>
+<div class="chart">
+    <canvasjs-chart [options]="chartOptions" [styles]="{width: '90%', height:'300px'}"></canvasjs-chart>    
+</div>
+<div class="footer"></div>

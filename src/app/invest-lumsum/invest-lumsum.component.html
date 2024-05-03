@@ -1,0 +1,123 @@
+<div class="sip-title">
+    <h3>LumSum Calculator</h3>
+    <button class="btn btn-outline-primary" (click)="resetButton()">Clear</button>
+</div>
+<div class="sip-init">
+<div [ngClass]="initclassset">
+<!--<form (ngSubmit)="onApply()" #fi="ngForm">-->
+    <form>    
+    <!--<h5>Initial Set Up:</h5>-->
+    <div class="sip-init-box">
+    <div class="sip-init-field">
+        <label class="form-label">Fund House:</label>
+        <select class="form-select"
+        (change)="setIcat($event)"
+        name="icat"
+        ngModel>
+            <option value="LargeCap">LargeCap</option>
+            <option value="MidCap">MidCap</option>
+            <option value="SmallCap">SmallCap</option>
+        </select>
+    </div>
+    <div class="sip-init-field">
+        <label class="form-label">Time Period: </label>
+        <select class="form-select"
+        (change)="setDays($event)"
+        name="days"
+        ngModel>
+            <option value="day">daily</option>
+            <option value="month">monthly</option>
+            <option value="year">yearly</option>
+        </select>
+    </div>
+    <div class="sip-init-field">
+        <div>
+            <label class="form-label">Duration:</label>
+            <input type="number" class="form-control" name="daysrange"
+            min="1"
+            (change)="setDuration($event)">
+        </div>
+    </div>
+    <div class="sip-init-field">
+        <div>
+            <label class="form-label">Rate:</label>
+            <input type="number" class="form-control" name="rate" 
+            min="1"
+            (change)="setRate($event)">
+        </div>
+    </div>
+    <div class="sip-init-field">
+        <div>
+            <label class="form-label">Investment($):</label>
+            <input type="number" class="form-control" name="starting"
+            min="1" 
+            (change)="setStart($event)">
+        </div>
+    </div>
+    </div>
+    <!--<button type="submit" class="btn btn-primary" [disabled]=!fi.valid>Apply</button>-->
+    </form>
+</div>
+<hr>
+<div>
+    <form>    
+        <div class="sip-init-box">
+            <div class="sip-init-field">
+                <label class="form-label">Info</label>
+            </div>
+            <div class="sip-init-field">
+                <label class="form-label">Type:</label>
+            </div>
+            <div class="sip-init-field">
+                <label class="form-label">Invested:</label>
+            </div>
+            <div class="sip-init-field">
+                <div>
+                    <label class="form-label">Rate:</label>
+                </div>
+            </div>
+            <div class="sip-init-field">
+                <div>
+                    <label class="form-label">Result:</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div>
+    <form>    
+        <div class="sip-init-box">
+            <div class="sip-init-field">
+                <label class="form-label">{{days}} {{dayscount}}</label>
+            </div>
+            <div class="sip-init-field">
+                <label class="form-label">{{icat}}</label>
+            </div>
+            <div class="sip-init-field">
+                <label class="form-label">{{totalInit}}</label>
+            </div>
+            <div class="sip-init-field">
+                <div>
+                    <label class="form-label">{{rate}}</label>
+                </div>
+            </div>
+            <div class="sip-init-field">
+                <div>
+                    <label class="form-label">{{resultstr}}</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<hr>
+<!--<form [formGroup]="dyForm">
+    <div formArrayName="inputFields">
+      <div *ngFor="let inputField of items.controls; let i = index">
+        <input type="text" [formControlName]="i">
+      </div>
+    </div>
+  </form>-->
+<div id="siptable" class="sip-table">
+</div>
+</div>
+

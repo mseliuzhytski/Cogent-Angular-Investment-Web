@@ -1,0 +1,59 @@
+
+.user-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.user-form{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.top-msg{
+    padding: 7px;
+    background-color: rgb(224, 224, 224);
+}
+.top-msg-const{
+    padding-left: 30px;
+}
+.top-msg-profile{
+    display: flex;
+}
+.top-msg-profile div{
+    margin-left: 30px;
+}
+.top-msg-hide{
+    display: none;
+}
+.top-msg-show{
+    display: flex;
+}
+hr{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    width: 1000px;
+}
+
+
+
+
+
+
+/*.user-info-box-bg{
+    background-color: rgb(255, 232, 232);
+}
+.user-info-display-bg{
+    background-color: rgb(255, 214, 214);
+}
+.editmode{
+    visibility: visible;
+}
+.savemode{
+   visibility: hidden;
+}
+.two-option-menu a{
+    margin-left:30px;
+    text-decoration: none;
+}
+*/

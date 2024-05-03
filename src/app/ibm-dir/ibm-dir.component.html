@@ -1,0 +1,20 @@
+<div class="sip-title">
+    <h3>Welcome to IBM Investment directory</h3>
+</div>
+<div class="sip-init">
+<div>
+<!--<form (ngSubmit)="onApply()" #fi="ngForm">-->
+    <form>    
+    <h5>Options:</h5>
+    <div class="sip-init-box">
+        <a class="btn btn-outline-primary" routerLink="/ibm/daily">Daily</a>
+        <div class="sip-init-field">
+            <a class="btn btn-outline-primary" routerLink="/ibm/monthly">Monthly</a>
+        </div>
+    </div>
+    <!--<button type="submit" class="btn btn-primary" [disabled]=!fi.valid>Apply</button>-->
+    </form>
+</div>
+<hr>
+<div class="footer"></div>
+<router-outlet></router-outlet>
