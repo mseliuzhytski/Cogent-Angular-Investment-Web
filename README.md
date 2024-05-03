@@ -1,4 +1,4 @@
-# My test example Investment App - MteInvestmentApp
+# About
 
 ## Description 
 - This project was created as part of the training program with Ravi Mishra as instructor at Cogent. 
